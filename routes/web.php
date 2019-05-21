@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index')->name('home');
+require __DIR__ . '/profile/profile.php';
